@@ -1,15 +1,59 @@
+# ========================================
+# Android Studio / IntelliJ
+# ========================================
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.gradle/
 local.properties
+.cache/
+captures/
+
+# ========================================
+# Build outputs
+# ========================================
+build/
+app/build/
+**/build/
+out/
+
+# ========================================
+# Gradle
+# ========================================
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+
+# ========================================
+# OS-specific
+# ========================================
+.DS_Store
+Thumbs.db
+
+# ========================================
+# Log files
+# ========================================
+*.log
+
+# ========================================
+# Android specific
+# ========================================
+# Keystore files (DO NOT commit these; store securely)
+*.jks
+*.keystore
+
+# Signing configs (use env variables instead)
+signing.properties
+
+# ========================================
+# Kotlin/Java
+# ========================================
+*.class
+*.jar
+*.war
+*.ear
+
+# ========================================
+# Jetpack Compose Previews
+# ========================================
+# (Android Studio sometimes generates preview caches)
+**/.compose-cache/
