@@ -57,7 +57,7 @@ dependencies {
     implementation(libs.maps.compose.utils)
     // Google Maps Compose widgets library
     implementation(libs.maps.compose.widgets)
-    implementation("androidx.constraintlayout:constraintlayout-compose:1.1.1")
+    implementation(libs.androidx.constraintlayout.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
