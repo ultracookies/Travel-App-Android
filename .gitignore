@@ -20,6 +20,8 @@ out/
 # Gradle
 # ========================================
 .gradle/
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
 gradle-app.setting
 
 # ========================================
@@ -47,7 +49,7 @@ signing.properties
 # Kotlin/Java
 # ========================================
 *.class
-*.jar
+
 *.war
 *.ear
 
