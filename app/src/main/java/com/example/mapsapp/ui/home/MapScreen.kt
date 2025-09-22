@@ -1,13 +1,12 @@
 package com.example.mapsapp.ui.home
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
@@ -33,14 +32,12 @@ import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.rememberCameraPositionState
 import com.google.maps.android.compose.rememberMarkerState
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Preview
 @Composable
 fun PreviewSearchBar() {
     SearchBar()
 }
 
-@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun SearchBar() {
     var text by remember { mutableStateOf("") }
@@ -53,7 +50,8 @@ fun SearchBar() {
         onValueChange = { text = it },
         singleLine = true,
         modifier = modifier
-            .border(width = 1.dp, shape = shape, color = Color.Gray),
+            .border(width = 1.dp, shape = shape, color = Color.Gray)
+            .height(40.dp),
         decorationBox = { innerTextField ->
             Row(
                 modifier = modifier.padding(4.dp),

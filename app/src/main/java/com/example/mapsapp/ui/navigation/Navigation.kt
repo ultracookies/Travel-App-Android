@@ -16,9 +16,16 @@ import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import kotlinx.coroutines.launch
+
+@Preview
+@Composable
+fun PreviewNavDrawerContent() {
+    NavDrawerContent()
+}
 
 @Composable
 fun NavDrawer(
@@ -29,15 +36,7 @@ fun NavDrawer(
     ModalNavigationDrawer(
         drawerState = drawerState,
         drawerContent = {
-            ModalDrawerSheet {
-                Text("Drawer title", modifier = Modifier.padding(16.dp))
-                HorizontalDivider()
-                NavigationDrawerItem(
-                    label = { Text("Drawer Item") },
-                    selected = false,
-                    onClick = {}
-                )
-            }
+            NavDrawerContent()
         },
         gesturesEnabled = drawerState.isOpen
     ) {
@@ -60,5 +59,18 @@ fun NavDrawer(
                 Icon(Icons.Filled.Menu, contentDescription = "")
             }
         }
+    }
+}
+
+@Composable
+private fun NavDrawerContent() {
+    ModalDrawerSheet {
+        Text("Drawer title", modifier = Modifier.padding(16.dp))
+        HorizontalDivider()
+        NavigationDrawerItem(
+            label = { Text("Drawer Item") },
+            selected = false,
+            onClick = {}
+        )
     }
 }
