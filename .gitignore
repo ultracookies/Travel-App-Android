@@ -20,7 +20,6 @@ out/
 # Gradle
 # ========================================
 .gradle/
-!gradle/wrapper/gradle-wrapper.jar
 gradle-app.setting
 
 # ========================================
