@@ -67,6 +67,7 @@ private fun NavDrawerContent() {
     ModalDrawerSheet {
         Text("Drawer title", modifier = Modifier.padding(16.dp))
         HorizontalDivider()
+
         NavigationDrawerItem(
             label = { Text("Drawer Item") },
             selected = false,
